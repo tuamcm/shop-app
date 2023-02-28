@@ -1,25 +1,16 @@
 import React from "react";
-import "./App.css";
-import TestPage from "pages/TestPage/TestPage";
+import TestPage from "pages/test/TestPage";
+import reduxStore, { persistor } from "app/reduxStore";
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
 
 const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
+    <Provider store={reduxStore}>
+      <PersistGate loading={null} persistor={persistor}>
         <TestPage />
-        <p>
-          Edit <code>src/App.tsx </code>and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      </PersistGate>
+    </Provider>
   );
 };
 

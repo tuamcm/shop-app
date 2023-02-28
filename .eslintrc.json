@@ -23,6 +23,7 @@
   },
   "plugins": ["react", "@typescript-eslint", "prettier"],
   "rules": {
+    "no-param-reassign": 0,
     "react/function-component-definition": [ // fix error arrow function
       2,
       {
