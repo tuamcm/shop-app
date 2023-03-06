@@ -1,5 +1,5 @@
 /**
- * Title     Path
+ * EXAMPLE:
  * Index:    "example/"
  * Message:  "example/message"
  * Create:   "example/create"
@@ -9,13 +9,13 @@
 
 const URL_ROUTES = {
   Root: "/",
-  Login: "login",
+  Login: "/login",
   Common: {
     Create: "create",
     Edit: "edit/:id",
     Detail: "detail/:id",
   },
-  Admin: "admin",
+  Admin: "/admin",
   Dashboard: {
     Index: "dashboard",
     Notification: "notification",

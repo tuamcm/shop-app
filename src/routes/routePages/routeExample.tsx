@@ -1,4 +1,4 @@
-import { Route } from "react-router-dom";
+import { NavLink, Route } from "react-router-dom";
 import URL_ROUTES from "../setting";
 
 const Example = () => {
@@ -6,7 +6,12 @@ const Example = () => {
 };
 
 const ExampleCreate = () => {
-  return <h1>ExampleCreate Page</h1>;
+  return (
+    <h1>
+      ExampleCreate Page
+      <NavLink to="/login">Login Page</NavLink>
+    </h1>
+  );
 };
 
 const ExampleEdit = () => {

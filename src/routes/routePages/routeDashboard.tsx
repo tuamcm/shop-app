@@ -1,8 +1,15 @@
-import { Route } from "react-router-dom";
+import { NavLink, Route } from "react-router-dom";
 import URL_ROUTES from "../setting";
 
 export const Dashboard = () => {
-  return <h1>Dashboard Page</h1>;
+  return (
+    <h1>
+      Dashboard Page
+      <p>
+        <NavLink to="/login">Login Page</NavLink>
+      </p>
+    </h1>
+  );
 };
 
 const DashboardNotification = () => {
